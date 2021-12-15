@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:flowable="http://flowable.org/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="sample-diagram" targetNamespace="http://www.flowable.org/processdef" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+  <bpmn2:process id="Process_1639561491456" name="流程_1639561491456">
+    <bpmn2:startEvent id="StartEvent_1639561548279" name="开始" flowable:formType="1" flowable:initiator="applyUserId">
+      <bpmn2:documentation>流程开始</bpmn2:documentation>
+      <bpmn2:extensionElements />
+      <bpmn2:outgoing>SequenceFlow_0k7ygy2</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:userTask id="UserTask_0x3ki5y" name="任务1" flowable:formType="1">
+      <bpmn2:extensionElements>
+        <flowable:assignee type="user" value="028260c31b3e4059b4f6a6b60a9070ed,0e6c798c4435430e81201669b48638a4,648e4b16025d43218d6cb6d68b1fd399" condition="0" operationType="0" sort="0" />
+        <flowable:assignee type="post" value="aa0342a73af44d6aac96dd0a40b4a27b,3f3b0c6ab8f840f58f184a418a5de00e" condition="0" operationType="0" sort="10" />
+        <flowable:assignee type="depart" value="8e23c1a51d214f13943e3555fd0baab0" condition="0" operationType="0" sort="20" />
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_0k7ygy2</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0s1x4sv</bpmn2:outgoing>
+    </bpmn2:userTask>
+    <bpmn2:sequenceFlow id="SequenceFlow_0k7ygy2" sourceRef="StartEvent_1639561548279" targetRef="UserTask_0x3ki5y" />
+    <bpmn2:endEvent id="EndEvent_1kjx5wm" name="结束">
+      <bpmn2:extensionElements />
+      <bpmn2:incoming>SequenceFlow_0s1x4sv</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="SequenceFlow_0s1x4sv" sourceRef="UserTask_0x3ki5y" targetRef="EndEvent_1kjx5wm" />
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1639561491456">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1639561548279">
+        <dc:Bounds x="209" y="283" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="217" y="326" width="22" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0x3ki5y_di" bpmnElement="UserTask_0x3ki5y">
+        <dc:Bounds x="300" y="261" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0k7ygy2_di" bpmnElement="SequenceFlow_0k7ygy2">
+        <di:waypoint x="245" y="301" />
+        <di:waypoint x="300" y="301" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_1kjx5wm_di" bpmnElement="EndEvent_1kjx5wm">
+        <dc:Bounds x="462" y="283" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="469" y="326" width="22" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0s1x4sv_di" bpmnElement="SequenceFlow_0s1x4sv">
+        <di:waypoint x="400" y="301" />
+        <di:waypoint x="462" y="301" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>
