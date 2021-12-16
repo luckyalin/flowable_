@@ -11,7 +11,7 @@
  Target Server Version : 80011
  File Encoding         : 65001
 
- Date: 15/12/2021 17:41:37
+ Date: 16/12/2021 17:59:56
 */
 
 SET NAMES utf8mb4;
@@ -38,10 +38,6 @@ CREATE TABLE `act_evt_log`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_evt_log
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_ge_bytearray
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ge_bytearray`;
@@ -58,10 +54,6 @@ CREATE TABLE `act_ge_bytearray`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_ge_bytearray
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_ge_property
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ge_property`;
@@ -71,20 +63,6 @@ CREATE TABLE `act_ge_property`  (
   `REV_` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`NAME_`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of act_ge_property
--- ----------------------------
-INSERT INTO `act_ge_property` VALUES ('cfg.execution-related-entities-count', 'true', 1);
-INSERT INTO `act_ge_property` VALUES ('cfg.task-related-entities-count', 'true', 1);
-INSERT INTO `act_ge_property` VALUES ('common.schema.version', '6.4.0.0', 1);
-INSERT INTO `act_ge_property` VALUES ('identitylink.schema.version', '6.4.0.0', 1);
-INSERT INTO `act_ge_property` VALUES ('job.schema.version', '6.4.0.0', 1);
-INSERT INTO `act_ge_property` VALUES ('next.dbid', '1', 1);
-INSERT INTO `act_ge_property` VALUES ('schema.history', 'create(6.3.2.0)', 1);
-INSERT INTO `act_ge_property` VALUES ('schema.version', '6.4.0.0', 1);
-INSERT INTO `act_ge_property` VALUES ('task.schema.version', '6.4.0.0', 1);
-INSERT INTO `act_ge_property` VALUES ('variable.schema.version', '6.4.0.0', 1);
 
 -- ----------------------------
 -- Table structure for act_hi_actinst
@@ -115,10 +93,6 @@ CREATE TABLE `act_hi_actinst`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_hi_actinst
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_hi_attachment
 -- ----------------------------
 DROP TABLE IF EXISTS `act_hi_attachment`;
@@ -138,10 +112,6 @@ CREATE TABLE `act_hi_attachment`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_hi_attachment
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_hi_comment
 -- ----------------------------
 DROP TABLE IF EXISTS `act_hi_comment`;
@@ -157,10 +127,6 @@ CREATE TABLE `act_hi_comment`  (
   `FULL_MSG_` longblob NULL,
   PRIMARY KEY (`ID_`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of act_hi_comment
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_hi_detail
@@ -191,10 +157,6 @@ CREATE TABLE `act_hi_detail`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_hi_detail
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_hi_identitylink
 -- ----------------------------
 DROP TABLE IF EXISTS `act_hi_identitylink`;
@@ -216,10 +178,6 @@ CREATE TABLE `act_hi_identitylink`  (
   INDEX `ACT_IDX_HI_IDENT_LNK_TASK`(`TASK_ID_`) USING BTREE,
   INDEX `ACT_IDX_HI_IDENT_LNK_PROCINST`(`PROC_INST_ID_`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of act_hi_identitylink
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_hi_procinst
@@ -248,10 +206,6 @@ CREATE TABLE `act_hi_procinst`  (
   INDEX `ACT_IDX_HI_PRO_INST_END`(`END_TIME_`) USING BTREE,
   INDEX `ACT_IDX_HI_PRO_I_BUSKEY`(`BUSINESS_KEY_`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of act_hi_procinst
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_hi_taskinst
@@ -293,10 +247,6 @@ CREATE TABLE `act_hi_taskinst`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_hi_taskinst
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_hi_varinst
 -- ----------------------------
 DROP TABLE IF EXISTS `act_hi_varinst`;
@@ -328,10 +278,6 @@ CREATE TABLE `act_hi_varinst`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_hi_varinst
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_id_bytearray
 -- ----------------------------
 DROP TABLE IF EXISTS `act_id_bytearray`;
@@ -344,10 +290,6 @@ CREATE TABLE `act_id_bytearray`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_id_bytearray
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_id_priv
 -- ----------------------------
 DROP TABLE IF EXISTS `act_id_priv`;
@@ -357,10 +299,6 @@ CREATE TABLE `act_id_priv`  (
   PRIMARY KEY (`ID_`) USING BTREE,
   UNIQUE INDEX `ACT_UNIQ_PRIV_NAME`(`NAME_`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of act_id_priv
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_id_priv_mapping
@@ -379,10 +317,6 @@ CREATE TABLE `act_id_priv_mapping`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_id_priv_mapping
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_id_property
 -- ----------------------------
 DROP TABLE IF EXISTS `act_id_property`;
@@ -392,11 +326,6 @@ CREATE TABLE `act_id_property`  (
   `REV_` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`NAME_`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of act_id_property
--- ----------------------------
-INSERT INTO `act_id_property` VALUES ('schema.version', '6.4.0.0', 1);
 
 -- ----------------------------
 -- Table structure for act_id_token
@@ -413,10 +342,6 @@ CREATE TABLE `act_id_token`  (
   `TOKEN_DATA_` varchar(2000) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL,
   PRIMARY KEY (`ID_`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of act_id_token
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_procdef_info
@@ -436,10 +361,6 @@ CREATE TABLE `act_procdef_info`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_procdef_info
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_re_deployment
 -- ----------------------------
 DROP TABLE IF EXISTS `act_re_deployment`;
@@ -456,10 +377,6 @@ CREATE TABLE `act_re_deployment`  (
   `ENGINE_VERSION_` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL,
   PRIMARY KEY (`ID_`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of act_re_deployment
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_re_model
@@ -489,10 +406,6 @@ CREATE TABLE `act_re_model`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_re_model
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_re_procdef
 -- ----------------------------
 DROP TABLE IF EXISTS `act_re_procdef`;
@@ -518,10 +431,6 @@ CREATE TABLE `act_re_procdef`  (
   PRIMARY KEY (`ID_`) USING BTREE,
   UNIQUE INDEX `ACT_UNIQ_PROCDEF`(`KEY_`, `VERSION_`, `DERIVED_VERSION_`, `TENANT_ID_`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of act_re_procdef
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_ru_deadletter_job
@@ -565,10 +474,6 @@ CREATE TABLE `act_ru_deadletter_job`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_ru_deadletter_job
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_ru_event_subscr
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ru_event_subscr`;
@@ -589,10 +494,6 @@ CREATE TABLE `act_ru_event_subscr`  (
   INDEX `ACT_FK_EVENT_EXEC`(`EXECUTION_ID_`) USING BTREE,
   CONSTRAINT `ACT_FK_EVENT_EXEC` FOREIGN KEY (`EXECUTION_ID_`) REFERENCES `act_ru_execution` (`id_`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of act_ru_event_subscr
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_ru_execution
@@ -646,10 +547,6 @@ CREATE TABLE `act_ru_execution`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_ru_execution
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_ru_history_job
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ru_history_job`;
@@ -670,10 +567,6 @@ CREATE TABLE `act_ru_history_job`  (
   `TENANT_ID_` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '',
   PRIMARY KEY (`ID_`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of act_ru_history_job
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_ru_identitylink
@@ -703,10 +596,6 @@ CREATE TABLE `act_ru_identitylink`  (
   CONSTRAINT `ACT_FK_IDL_PROCINST` FOREIGN KEY (`PROC_INST_ID_`) REFERENCES `act_ru_execution` (`id_`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `ACT_FK_TSKASS_TASK` FOREIGN KEY (`TASK_ID_`) REFERENCES `act_ru_task` (`id_`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of act_ru_identitylink
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_ru_job
@@ -753,10 +642,6 @@ CREATE TABLE `act_ru_job`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_ru_job
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_ru_suspended_job
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ru_suspended_job`;
@@ -797,10 +682,6 @@ CREATE TABLE `act_ru_suspended_job`  (
   CONSTRAINT `ACT_FK_SUSPENDED_JOB_PROCESS_INSTANCE` FOREIGN KEY (`PROCESS_INSTANCE_ID_`) REFERENCES `act_ru_execution` (`id_`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `ACT_FK_SUSPENDED_JOB_PROC_DEF` FOREIGN KEY (`PROC_DEF_ID_`) REFERENCES `act_re_procdef` (`id_`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of act_ru_suspended_job
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_ru_task
@@ -850,10 +731,6 @@ CREATE TABLE `act_ru_task`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_ru_task
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_ru_timer_job
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ru_timer_job`;
@@ -898,10 +775,6 @@ CREATE TABLE `act_ru_timer_job`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_ru_timer_job
--- ----------------------------
-
--- ----------------------------
 -- Table structure for act_ru_variable
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ru_variable`;
@@ -934,8 +807,19 @@ CREATE TABLE `act_ru_variable`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of act_ru_variable
+-- Table structure for flow_category
 -- ----------------------------
+DROP TABLE IF EXISTS `flow_category`;
+CREATE TABLE `flow_category`  (
+  `category_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '流程分类id',
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '分类名称',
+  `show_order` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '显示顺序',
+  `update_time` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
+  `update_by` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '更新人',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `create_by` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '创建人',
+  PRIMARY KEY (`category_id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for flow_entry
@@ -949,7 +833,7 @@ CREATE TABLE `flow_entry`  (
   `main_version_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `lastest_publish_time` datetime(0) NULL DEFAULT NULL,
   `status` tinyint(4) NULL DEFAULT NULL,
-  `bpmn_xml` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `bpmn_xml` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
   `form_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `form_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `update_time` datetime(0) NULL DEFAULT NULL,
@@ -958,9 +842,5 @@ CREATE TABLE `flow_entry`  (
   `create_by` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`entry_id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of flow_entry
--- ----------------------------
 
 SET FOREIGN_KEY_CHECKS = 1;
