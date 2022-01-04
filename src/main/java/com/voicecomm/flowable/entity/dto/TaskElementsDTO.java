@@ -1,14 +1,13 @@
 package com.voicecomm.flowable.entity.dto;
 
 import lombok.Data;
-
 import java.util.List;
 
 /**
  * @ClassName TaskElementsDTO
  * @Author yulin.li
  * @Date 2021/12/17 9:42
- * @Description TaskElementsDTO
+ * @Description 扩展属性dto
  */
 @Data
 public class TaskElementsDTO {

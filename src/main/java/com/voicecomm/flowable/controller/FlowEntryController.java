@@ -1,14 +1,12 @@
 package com.voicecomm.flowable.controller;
 
 import cn.hutool.core.bean.BeanUtil;
-import cn.hutool.core.bean.copier.BeanCopier;
 import com.voicecomm.flowable.entity.FlowEntry;
 import com.voicecomm.flowable.entity.dto.FlowEntryDTO;
 import com.voicecomm.flowable.service.FlowEntryService;
 import com.voicecomm.flowable.service.FlowRuntimeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,11 +23,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(("/flowEntry"))
 @Api("流程操作controller")
 public class FlowEntryController {
-    @Autowired
-    private FlowEntryService flowEntryService;
+    /**
+     * 流程定义service
+     */
+    private final FlowEntryService flowEntryService;
 
-    @Autowired
-    private FlowRuntimeService runtimeService;
+    /**
+     * 运行中流程操作service
+     */
+    private final FlowRuntimeService runtimeService;
+
+    public FlowEntryController(FlowEntryService flowEntryService, FlowRuntimeService runtimeService) {
+        this.flowEntryService = flowEntryService;
+        this.runtimeService = runtimeService;
+    }
 
     @PostMapping
     @ApiOperation(("添加流程"))

@@ -2,7 +2,6 @@ package com.voicecomm.flowable.service.impl;
 
 import com.voicecomm.flowable.service.FlowHistoryService;
 import org.flowable.engine.HistoryService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,7 +12,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class FlowHistoryServiceImpl implements FlowHistoryService {
-    @Autowired
-    private HistoryService historyService;
+    private final HistoryService historyService;
 
+    public FlowHistoryServiceImpl(HistoryService historyService) {
+        this.historyService = historyService;
+    }
 }

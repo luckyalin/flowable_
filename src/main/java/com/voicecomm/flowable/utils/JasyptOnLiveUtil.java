@@ -1,10 +1,12 @@
 package com.voicecomm.flowable.utils;
 
 import java.util.Scanner;
-
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 import org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig;
-//加密工具类
+/**
+ * @author yulinli
+ * 数据库加密工具类
+ */
 public class JasyptOnLiveUtil {
 
    private static StandardPBEStringEncryptor encryptor;

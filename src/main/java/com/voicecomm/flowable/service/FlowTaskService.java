@@ -1,7 +1,5 @@
 package com.voicecomm.flowable.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
-
 /**
  * @ClassName ActTaskService
  * @Author yulin.li

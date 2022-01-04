@@ -7,5 +7,9 @@ package com.voicecomm.flowable.service;
  * @Description RuntimeService
  */
 public interface FlowRuntimeService {
+    /**
+     * 发起一个流程
+     * @param processDefinitionKey
+     */
     void startProcess(String processDefinitionKey);
 }

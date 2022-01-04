@@ -3,7 +3,6 @@ package com.voicecomm.flowable.service.impl;
 import com.voicecomm.flowable.service.FlowRuntimeService;
 import org.flowable.engine.RuntimeService;
 import org.flowable.engine.runtime.ProcessInstance;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,8 +13,12 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class FlowRuntimeServiceImpl implements FlowRuntimeService {
-    @Autowired
-    private RuntimeService runtimeService;
+    private final RuntimeService runtimeService;
+
+    public FlowRuntimeServiceImpl(RuntimeService runtimeService) {
+        this.runtimeService = runtimeService;
+    }
+
     @Override
     public void startProcess(String processDefinitionKey) {
         ProcessInstance processInstance = runtimeService.startProcessInstanceById(processDefinitionKey, null, null);

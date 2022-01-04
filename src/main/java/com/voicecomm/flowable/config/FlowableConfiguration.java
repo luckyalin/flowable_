@@ -1,11 +1,10 @@
 package com.voicecomm.flowable.config;
 
-import io.swagger.annotations.Api;
-import org.flowable.engine.*;
-import org.flowable.spring.SpringProcessEngineConfiguration;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
+/**
+ * @author yulinli
+ * flowable配置类
+ */
 @Configuration
 public class FlowableConfiguration {
 
