@@ -5,7 +5,7 @@ import com.voicecomm.flowable.entity.FlowEntry;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * @author yulinli
+ * @author yulin.li
  */
 @Mapper
 public interface FlowEntryMapper extends BaseMapper<FlowEntry> {

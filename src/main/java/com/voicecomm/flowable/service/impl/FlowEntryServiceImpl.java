@@ -8,7 +8,7 @@ import org.flowable.engine.RepositoryService;
 import org.springframework.stereotype.Service;
 
 /**
- * @author yulinli
+ * @author yulin.li
  */
 @Service
 public class FlowEntryServiceImpl extends ServiceImpl<FlowEntryMapper, FlowEntry> implements FlowEntryService {

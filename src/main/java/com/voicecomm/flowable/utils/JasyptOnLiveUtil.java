@@ -4,7 +4,7 @@ import java.util.Scanner;
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 import org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig;
 /**
- * @author yulinli
+ * @author yulin.li
  * 数据库加密工具类
  */
 public class JasyptOnLiveUtil {

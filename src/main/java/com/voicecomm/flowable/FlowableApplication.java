@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author yulinli
+ * @author yulin.li
  */
 @SpringBootApplication
 public class FlowableApplication {
