@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <flowable.version>6.4.0</flowable.version>
+        <flowable.version>6.5.0</flowable.version>
         <mybatis-plus>3.2.0</mybatis-plus>
         <hutool.version>5.3.4</hutool.version>
         <fastjson.version>1.2.76</fastjson.version>
@@ -32,15 +32,21 @@
         </dependency>
 
         <!-- flowable工作流相关jar包 -->
+<!--        <dependency>-->
+<!--            <groupId>org.flowable</groupId>-->
+<!--            <artifactId>flowable-spring-boot-starter-basic</artifactId>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.mybatis</groupId>-->
+<!--                    <artifactId>mybatis</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--            <version>${flowable.version}</version>-->
+<!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.flowable/flowable-spring-boot-starter -->
         <dependency>
             <groupId>org.flowable</groupId>
-            <artifactId>flowable-spring-boot-starter-basic</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.mybatis</groupId>
-                    <artifactId>mybatis</artifactId>
-                </exclusion>
-            </exclusions>
+            <artifactId>flowable-spring-boot-starter</artifactId>
             <version>${flowable.version}</version>
         </dependency>
 

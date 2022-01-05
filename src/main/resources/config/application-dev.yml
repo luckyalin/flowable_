@@ -4,3 +4,7 @@ spring:
     password: ENC(vgGbHfDJKo1D8xr4r62VEg==)
     url: jdbc:mysql://localhost:3306/flowable?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&nullCatalogMeansCurrent=true
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+jasypt:
+  encryptor:
+    password: voicecomm

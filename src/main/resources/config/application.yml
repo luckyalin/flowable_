@@ -6,8 +6,9 @@ spring:
     active: dev
   application:
     name: voicecomm-flowable
+
 flowable:
   async-executor-activate: false
-  database-schema-update: false
-  #mysql8.0\u9700\u52A0\u4E0A\u5F53\u524D\u914D\u7F6E
+  #数据库生成策略
+  database-schema-update: false  #每次启动都删除重新创建数据库
   database-schema: flowable

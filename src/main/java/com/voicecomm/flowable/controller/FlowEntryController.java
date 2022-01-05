@@ -54,8 +54,8 @@ public class FlowEntryController {
 
     @PostMapping("/startProcess")
     @ApiOperation(("发起流程"))
-    public ResponseEntity<Object> startProcess(String xml) {
-        runtimeService.startProcess(xml);
+    public ResponseEntity<Object> startProcess(String entryId) {
+        runtimeService.startProcess(entryId);
         return ResponseEntity.ok("发布成功");
     }
 }
